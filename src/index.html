@@ -3,15 +3,18 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Lubric</title>
     <link rel="stylesheet" href="css/bundle.min.css" />
   </head>
   <body>
-    @@include('partials/_header.html')
-
-    <main class="main"></main>
-
-    @@include('partials/_footer.html')
+    <main id="fullpage">
+      @@include('partials/_hero.html')
+      <!-- /Hero -->
+      @@include('partials/_categories.html')
+      <!-- /Categories -->
+      @@include('partials/_catalog.html')
+      <!-- /Catalog -->
+    </main>
 
     <script src="js/bundle.min.js"></script>
   </body>

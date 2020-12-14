@@ -2,9 +2,18 @@
 *::after,
 *::before {
   box-sizing: border-box;
-  -webkit-tap-highlight-color: transparent;
   padding: 0;
   margin: 0;
+  font-family: 'HelveticaNeueCyr';
+  font-size: 16px;
+  font-weight: 500;
+  color: $dark;
+  -webkit-tap-highlight-color: transparent;
+}
+
+::selection {
+  color: $white;
+  background: $secondary;
 }
 
 li {
@@ -26,6 +35,27 @@ h5,
 h6 {
   padding: 0;
   margin: 0;
+}
+
+h1 {
+  position: relative;
+  z-index: 3;
+  margin-bottom: 25px;
+  font-family: 'Montserrat';
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 68px;
+}
+
+h2 {
+  font-family: 'Montserrat';
+  font-size: 25px;
+  font-weight: 700;
+  line-height: 28px;
+}
+
+img {
+  max-width: 100%;
 }
 
 input {
@@ -51,4 +81,8 @@ button {
 
 select {
   -webkit-appearance: none;
+}
+
+span {
+  display: inline-block;
 }

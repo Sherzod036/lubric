@@ -1,0 +1,13 @@
+.section {
+  overflow: hidden;
+}
+
+.section.active {
+  & .hero {
+    @include visibilityv;
+  }
+
+  & .categories {
+    @include visibilityv;
+  }
+}

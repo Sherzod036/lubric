@@ -1,2 +1,16 @@
+$primary: #0445a3;
+$secondary: #ffcc29;
+$dark: #141515;
 $black: #000;
 $white: #fff;
+
+@mixin visibilityh {
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.6s ease 300ms;
+}
+
+@mixin visibilityv {
+  visibility: visible;
+  opacity: 1;
+}

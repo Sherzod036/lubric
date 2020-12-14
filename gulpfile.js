@@ -12,7 +12,7 @@ let path = {
   src: {
     html: [`${srcf}/*.html`, `!${srcf}/_*.html`],
     css: `${srcf}/scss/**/*.scss`,
-    js: `${srcf}/js/script.js`,
+    js: `${srcf}/js/*.js`,
     img: `${srcf}/img/**/*.*`,
     fonts: `${srcf}/fonts/**/*.ttf`,
   },
@@ -37,8 +37,6 @@ const { src, dest } = require('gulp'),
   strip = require('gulp-strip-comments'),
   uglify = require('gulp-uglify-es').default,
   imagemin = require('gulp-imagemin'),
-  webp = require('gulp-webp'),
-  webpHtml = require('gulp-webp-html'),
   ttf2woff = require('gulp-ttf2woff'),
   ttf2woff2 = require('gulp-ttf2woff2'),
   stylelint = require('gulp-stylelint');
@@ -56,7 +54,8 @@ function serve() {
 function bundlecss() {
   return src([
     'node_modules/normalize.css/normalize.css',
-    'node_modules/bootstrap/dist/css/bootstrap-grid.css',
+    'node_modules/fullpage.js/dist/jquery.fullpage.css',
+    'node_modules/owl.carousel/dist/assets/owl.carousel.css',
     path.src.css,
   ])
     .pipe(scss())
@@ -83,8 +82,8 @@ function styleLint() {
 function bundlejs() {
   return src([
     'node_modules/jquery/dist/jquery.js',
-    'node_modules/jquery-lazyload/jquery.lazyload.js',
-    'node_modules/gsap/dist/gsap.js',
+    'node_modules/fullpage.js/dist/jquery.fullpage.js',
+    'node_modules/owl.carousel/dist/owl.carousel.js',
     path.src.js,
   ])
     .pipe(concat('bundle.min.js'))
@@ -102,20 +101,12 @@ function markup() {
         basepath: '@file',
       })
     )
-    .pipe(webpHtml())
     .pipe(dest(path.build.html))
     .pipe(browserSync.stream());
 }
 
 function pic() {
   return src(path.src.img)
-    .pipe(
-      webp({
-        quality: 70,
-      })
-    )
-    .pipe(dest(path.build.img))
-    .pipe(src(path.src.img))
     .pipe(
       imagemin({
         progressive: true,
@@ -143,10 +134,7 @@ function clean() {
   return del(path.clean);
 }
 
-const build = gulp.series(
-  clean,
-  gulp.parallel(bundlecss, bundlejs, markup, pic, font)
-);
+const build = gulp.series(clean, gulp.parallel(bundlecss, bundlejs, markup, pic, font));
 const watch = gulp.parallel(build, observe, serve);
 
 exports.styleLint = styleLint;

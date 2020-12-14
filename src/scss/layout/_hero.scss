@@ -1,0 +1,83 @@
+.hero {
+  width: 100%;
+
+  @include visibilityh;
+
+  &__sketch {
+    position: absolute;
+    z-index: 2;
+
+    &_left {
+      bottom: 0;
+      left: 0;
+    }
+
+    &_right {
+      right: 0;
+      bottom: 0;
+    }
+  }
+
+  &__content {
+    position: relative;
+    padding: 30px 0;
+    background: $primary;
+  }
+
+  &__title {
+    color: $white;
+  }
+
+  &__btn {
+    position: relative;
+    z-index: 3;
+    padding: 10px 47px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24px;
+    color: $white;
+    background: $primary;
+    border: 2px solid $white;
+    border-radius: 22px;
+    transition: 0.3s;
+
+    &:hover {
+      color: $secondary;
+      border: 2px solid $secondary;
+    }
+  }
+
+  &__pic {
+    position: absolute;
+    z-index: 2;
+
+    &_circle {
+      top: 20%;
+      right: 20%;
+    }
+
+    &_synheon {
+      top: 40%;
+      left: 50%;
+      display: block;
+      width: 270px;
+      height: 359px;
+    }
+
+    &_graumann {
+      top: 40%;
+      left: 70%;
+      width: 300px;
+      height: 371px;
+    }
+
+    &_zoon {
+      top: 30%;
+      left: 58%;
+      z-index: 3;
+      width: 375px;
+      height: 472px;
+    }
+  }
+}

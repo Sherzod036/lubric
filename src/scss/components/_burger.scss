@@ -1,0 +1,46 @@
+.burger {
+  position: absolute;
+  top: 6%;
+  right: 14%;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+
+  &__txt {
+    margin-right: 10px;
+    font-size: 14px;
+    line-height: 14px;
+  }
+
+  &__ico {
+    width: 25px;
+
+    & span {
+      display: block;
+      width: 100%;
+      height: 3px;
+      margin-bottom: 5px;
+      border-radius: 2px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+.hero .burger__txt {
+  color: $white;
+}
+
+.hero .burger__ico span {
+  background: $white;
+}
+
+.categories .burger__txt {
+  color: $dark;
+}
+
+.categories .burger__ico span {
+  background: $dark;
+}
