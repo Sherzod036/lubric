@@ -40,15 +40,16 @@ h6 {
 h1 {
   position: relative;
   z-index: 3;
+  width: 525px;
   margin-bottom: 25px;
-  font-family: 'Montserrat';
+  font-family: 'Montserrat', sans-serif;
   font-size: 56px;
   font-weight: 700;
   line-height: 68px;
 }
 
 h2 {
-  font-family: 'Montserrat';
+  font-family: 'Montserrat', sans-serif;
   font-size: 25px;
   font-weight: 700;
   line-height: 28px;
@@ -85,4 +86,13 @@ select {
 
 span {
   display: inline-block;
+}
+
+.letter {
+  position: relative;
+  z-index: 3;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 68px;
 }

@@ -35,3 +35,19 @@
 .hero .subscribe__item::before {
   color: $white;
 }
+
+.catalog .subscribe__txt {
+  color: $primary;
+}
+
+.catalog .subscribe__item::before {
+  color: $primary;
+}
+
+.contacts .subscribe__txt {
+  color: $white;
+}
+
+.contacts .subscribe__item::before {
+  color: $white;
+}

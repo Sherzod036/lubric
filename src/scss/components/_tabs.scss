@@ -1,0 +1,23 @@
+.tabs {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.tabscaption {
+  display: block;
+  width: 25%;
+
+  & li {
+    cursor: pointer;
+  }
+}
+
+.tabcontent {
+  display: none;
+  width: 70%;
+
+  &.active {
+    display: block;
+  }
+}

@@ -10,4 +10,12 @@
   & .categories {
     @include visibilityv;
   }
+
+  & .catalog {
+    @include visibilityv;
+  }
+
+  & .contacts {
+    @include visibilityv;
+  }
 }

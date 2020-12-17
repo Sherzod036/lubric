@@ -54,8 +54,8 @@ function serve() {
 function bundlecss() {
   return src([
     'node_modules/normalize.css/normalize.css',
-    'node_modules/fullpage.js/dist/jquery.fullpage.css',
-    'node_modules/owl.carousel/dist/assets/owl.carousel.css',
+    'node_modules/fullpage.js/dist/fullpage.css',
+    'node_modules/flickity/dist/flickity.css',
     path.src.css,
   ])
     .pipe(scss())
@@ -82,8 +82,9 @@ function styleLint() {
 function bundlejs() {
   return src([
     'node_modules/jquery/dist/jquery.js',
-    'node_modules/fullpage.js/dist/jquery.fullpage.js',
-    'node_modules/owl.carousel/dist/owl.carousel.js',
+    'node_modules/fullpage.js/dist/fullpage.js',
+    'node_modules/gsap/dist/gsap.js',
+    'node_modules/flickity/dist/flickity.pkgd.js',
     path.src.js,
   ])
     .pipe(concat('bundle.min.js'))
