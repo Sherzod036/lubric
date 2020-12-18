@@ -44,6 +44,14 @@
   color: $primary;
 }
 
+.about .subscribe__txt {
+  color: $white;
+}
+
+.about .subscribe__item::before {
+  color: $white;
+}
+
 .contacts .subscribe__txt {
   color: $white;
 }

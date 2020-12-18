@@ -1,8 +1,8 @@
 $(() => {
   function fullpageInit() {
     $('#fullpage').fullpage({
-      anchors: ['hero', 'categories', 'catalog', 'contacts'],
-      sectionsColor: ['#0445a3', '#ffcc29', '#fff', '#0445a3'],
+      anchors: ['hero', 'categories', 'catalog', 'about', 'contacts'],
+      sectionsColor: ['#0445a3', '#ffcc29', '#fff', '#fff','#0445a3'],
       scrollingSpeed: 1000,
       navigation: true,
       onLeave: (origin, destination, direction) => {
@@ -10,9 +10,11 @@ $(() => {
         let title = section.querySelector('.title_anime');
 
         title.innerHTML = title.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+        // Vars
         let letters = section.querySelectorAll('.letter');
 
-        const tl = new TimelineMax();
+        const tl = new TimelineMax({ delay: 0.3 });
 
         tl.staggerFrom(letters, 0.6, { opacity: 0, ease: Power4.easeInOut }, 0.06, 0);
       },
@@ -25,7 +27,7 @@ $(() => {
 
   $scrollDown.on('click', (e) => {
     e.preventDefault();
-    $.fn.fullpage.moveSectionDown();
+    fullpage_api.moveSectionDown();
   });
 
   $('.tabscaption li').on('click', function () {
