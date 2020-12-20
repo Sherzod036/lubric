@@ -52,6 +52,14 @@
   color: $white;
 }
 
+.mfiles .subscribe__txt {
+  color: $primary;
+}
+
+.mfiles .subscribe__item::before {
+  color: $primary;
+}
+
 .contacts .subscribe__txt {
   color: $white;
 }

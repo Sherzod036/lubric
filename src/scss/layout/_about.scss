@@ -37,6 +37,10 @@
     overflow: hidden;
     filter: drop-shadow(0 0 27px rgba(255, 255, 255, 0.54));
     border-radius: 20px;
+
+    & img {
+      display: block;
+    }
   }
 
   &__exps {
@@ -51,7 +55,7 @@
     &-count {
       display: block;
       font-size: 56px;
-      font-weight: 700;
+      font-weight: bold;
       line-height: 68px;
       color: $white;
     }
@@ -69,7 +73,7 @@
       display: block;
       max-width: 158px;
       margin: 8px 0;
-      border: 1px solid #ffffff;
+      border: 1px solid $white;
     }
 
     &-desc {

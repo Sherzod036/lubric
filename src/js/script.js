@@ -1,8 +1,8 @@
 $(() => {
   function fullpageInit() {
     $('#fullpage').fullpage({
-      anchors: ['hero', 'categories', 'catalog', 'about', 'contacts'],
-      sectionsColor: ['#0445a3', '#ffcc29', '#fff', '#fff','#0445a3'],
+      anchors: ['hero', 'categories', 'catalog', 'about', 'mfiles', 'contacts'],
+      sectionsColor: ['#0445a3', '#ffcc29', '#fff', '#0445a3', '#fff', '#0445a3'],
       scrollingSpeed: 1000,
       navigation: true,
       onLeave: (origin, destination, direction) => {
@@ -42,12 +42,10 @@ $(() => {
       .addClass('active');
   });
 
-  // Flickity
-  $('.catalog-slider').flickity({
-    cellAlign: 'left',
-    contain: true,
-    draggable: false,
-    pageDots: false,
-    wrapAround: true,
+  // Sliders
+  $('.catalog-slider').owlCarousel({
+    loop: true,
+    nav: true,
+    navText: ['<span class="icon-slider-arrow-left"></span>', '<span class="icon-slider-arrow-right"></span>'],
   });
 });

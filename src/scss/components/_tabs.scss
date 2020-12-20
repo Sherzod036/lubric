@@ -6,16 +6,36 @@
 
 .tabscaption {
   display: block;
-  width: 25%;
+  width: 30%;
 
   & li {
+    width: 300px;
     cursor: pointer;
+
+    &.active .tablogo {
+      border-right: 0;
+      border-bottom: 1px solid #d0d0d0;
+
+      & img {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.tablogo {
+  display: block;
+  padding: 35px 0;
+  border-right: 1px solid #d0d0d0;
+
+  & img {
+    opacity: 0.3;
   }
 }
 
 .tabcontent {
   display: none;
-  width: 70%;
+  width: 66%;
 
   &.active {
     display: block;

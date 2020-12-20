@@ -1,5 +1,19 @@
-// Flickity
+// Owl carousel
+.catalog-slider .owl-item {
+  width: 300px !important;
+}
 
-.flickity-viewport {
-  height: 525px !important;
+.catalog-slider .owl-stage-outer {
+  width: 99999px;
+  height: 512px;
+}
+
+.catalog-slider .owl-nav {
+  position: absolute;
+  top: -29px;
+  right: -8%;
+}
+
+.catalog-slider .owl-prev {
+  margin-right: 8px;
 }

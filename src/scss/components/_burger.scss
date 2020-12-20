@@ -53,18 +53,26 @@
   background: $primary;
 }
 
-.contacts .burger__txt {
-  color: $white;
-}
-
-.contacts .burger__ico span {
-  background: $white;
-}
-
 .about .burger__txt {
   color: $white;
 }
 
 .about .burger__ico span {
+  background: $white;
+}
+
+.mfiles .burger__txt {
+  color: $primary;
+}
+
+.mfiles .burger__ico span {
+  background: $primary;
+}
+
+.contacts .burger__txt {
+  color: $white;
+}
+
+.contacts .burger__ico span {
   background: $white;
 }

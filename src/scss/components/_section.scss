@@ -19,6 +19,10 @@
     @include visibilityv;
   }
 
+  & .mfiles {
+    @include visibilityv;
+  }
+
   & .contacts {
     @include visibilityv;
   }

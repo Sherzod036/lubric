@@ -1,0 +1,13 @@
+.mfiles {
+  width: 100%;
+
+  @include visibilityh;
+
+  &__title {
+    background: $white;
+
+    & span {
+      color: $primary;
+    }
+  }
+}
