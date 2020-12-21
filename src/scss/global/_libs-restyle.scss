@@ -1,3 +1,29 @@
+// Fullpage
+#fp-nav ul li a.active span,
+.fp-slidesNav ul li a.active span {
+  position: absolute;
+  background: $white;
+  filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
+}
+#fp-nav ul li a span,
+.fp-slidesNav ul li a span {
+  width: 12px;
+  height: 12px;
+  background: rgba(0, 0, 0, 0);
+  border: 1px solid $white;
+  border-radius: 50%;
+}
+#fp-nav ul li:hover a span,
+.fp-slidesNav ul li:hover a span,
+#fp-nav ul li a.active span,
+.fp-slidesNav ul li a.active span,
+#fp-nav ul li:hover a.active span,
+.fp-slidesNav ul li:hover a.active span {
+  width: 12px;
+  height: 12px;
+  margin: -2px 0 0 -2px;
+}
+
 // Owl carousel
 .catalog-slider .owl-item {
   width: 300px !important;
@@ -11,9 +37,28 @@
 .catalog-slider .owl-nav {
   position: absolute;
   top: -29px;
-  right: -8%;
+  right: -7%;
 }
 
 .catalog-slider .owl-prev {
+  margin-right: 8px;
+}
+
+.mfiles-slider .owl-item {
+  width: 567px !important;
+}
+
+.mfiles-slider .owl-stage-outer {
+  width: 99999px;
+  height: 456px;
+}
+
+.mfiles-slider .owl-nav {
+  position: absolute;
+  top: -50px;
+  right: 0;
+}
+
+.mfiles-slider .owl-prev {
   margin-right: 8px;
 }

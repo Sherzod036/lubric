@@ -23,6 +23,8 @@ $(() => {
 
   fullpageInit();
 
+  // Section active
+
   let $scrollDown = $('.scroll-down');
 
   $scrollDown.on('click', (e) => {
@@ -44,6 +46,12 @@ $(() => {
 
   // Sliders
   $('.catalog-slider').owlCarousel({
+    loop: true,
+    nav: true,
+    navText: ['<span class="icon-slider-arrow-left"></span>', '<span class="icon-slider-arrow-right"></span>'],
+  });
+
+  $('.mfiles-slider').owlCarousel({
     loop: true,
     nav: true,
     navText: ['<span class="icon-slider-arrow-left"></span>', '<span class="icon-slider-arrow-right"></span>'],
