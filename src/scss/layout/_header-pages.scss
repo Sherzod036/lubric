@@ -1,0 +1,46 @@
+.header-pages {
+  padding: 15px 0;
+  background: $primary;
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__inner {
+    display: flex;
+    align-items: center;
+  }
+
+  & .burger {
+    position: static;
+
+    & span {
+      background: $secondary;
+    }
+  }
+
+  &__subscribe {
+    display: flex;
+    align-items: center;
+    width: 100%;
+
+    & a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 36px;
+      height: 36px;
+      margin-right: 10px;
+      background: $white;
+      border-radius: 50%;
+
+      & span::before {
+        display: block;
+        font-size: 21px;
+        color: $primary;
+      }
+    }
+  }
+}

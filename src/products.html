@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lubric</title>
+    <link rel="stylesheet" href="css/bundle.min.css" />
+  </head>
+  <body>
+    <header class="header-pages">
+      <div class="wrapper-pages header-pages__wrapper">
+        <a class="header-pages__logo" href="#">
+          <img src="img/logos/header-pages.svg" alt="" />
+        </a>
+        <div class="header-pages__inner">
+          <div class="header-pages__subscribe">
+            <a href="#">
+              <span class="icon-telegram"></span>
+            </a>
+            <a href="#">
+              <span class="icon-instagram"></span>
+            </a>
+            <a href="#">
+              <span class="icon-facebook"></span>
+            </a>
+          </div>
+          <!-- /Subscribe -->
+          <a class="burger" href="#">
+            <div class="burger__ico">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </a>
+          <!-- /Burger -->
+        </div>
+      </div>
+    </header>
+
+    <div class="page-products">
+      <div class="wrapper-pages">
+        <div class="page-products__top-block">
+          <span class="title-pages">Продукция</span>
+        </div>
+        <!-- /Top block -->
+        <div class="page-products__content">
+          @@include('partials/_product.html') @@include('partials/_product.html') @@include('partials/_product.html')
+          @@include('partials/_product.html') @@include('partials/_product.html') @@include('partials/_product.html')
+          @@include('partials/_product.html') @@include('partials/_product.html')
+        </div>
+      </div>
+    </div>
+    <!-- /Products -->
+
+    <script src="js/bundle.min.js"></script>
+  </body>
+</html>

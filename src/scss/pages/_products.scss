@@ -1,0 +1,16 @@
+.page-products {
+  &__top-block {
+    margin: 55px 0;
+  }
+
+  &__content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    & .product {
+      margin: 0;
+      margin-bottom: 27px;
+    }
+  }
+}
