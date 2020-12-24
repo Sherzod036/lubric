@@ -62,3 +62,62 @@
 .mfiles-slider .owl-prev {
   margin-right: 8px;
 }
+
+// Select2
+
+.selection {
+  width: 100%;
+}
+
+.select2-container {
+  width: 210px !important;
+}
+
+.select2-container .select2-selection--single .select2-selection__rendered {
+  padding: 0;
+  padding: 5px 10px;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__arrow {
+  display: none;
+}
+
+.select2-container--default .select2-selection--single {
+  height: auto;
+  background: $secondary;
+  border: 0;
+  border-radius: 10px;
+  outline: none;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+  font-family: 'HelveticaNeueCyr', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: $primary;
+}
+
+.select2-container--default .select2-results__option[aria-selected='true'] {
+  font-family: 'HelveticaNeueCyr', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: $white;
+  background: $primary;
+}
+
+.select2-results__option {
+  font-family: 'HelveticaNeueCyr', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: $dark;
+  background: $secondary;
+}
+
+.select2-container--default .select2-results__option--highlighted[aria-selected] {
+  color: $white;
+  background: $primary;
+}
+
+.select2-container--open .select2-dropdown--below {
+  border: 0;
+}

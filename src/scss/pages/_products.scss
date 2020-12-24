@@ -1,5 +1,8 @@
 .page-products {
   &__top-block {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     margin: 55px 0;
   }
 
@@ -13,4 +16,39 @@
       margin-bottom: 27px;
     }
   }
+}
+
+.select {
+  position: relative;
+
+  &__title {
+    margin-right: 14px;
+    font-family: 'HelveticaNeueCyr', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 14px;
+    color: $primary;
+  }
+
+  & .icon-single-arrow {
+    position: absolute;
+    top: 45%;
+    right: 5%;
+    z-index: 5;
+    transform: translateY(-50%);
+
+    &::before {
+      font-size: 8px;
+      color: $primary;
+    }
+  }
+}
+
+.selects-block {
+  display: flex;
+  align-items: center;
+}
+
+.select:first-child {
+  margin-right: 50px;
 }

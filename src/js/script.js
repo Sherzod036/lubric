@@ -56,4 +56,10 @@ $(() => {
     nav: true,
     navText: ['<span class="icon-slider-arrow-left"></span>', '<span class="icon-slider-arrow-right"></span>'],
   });
+
+  // Selects
+
+  $('.select select').select2({
+    minimumResultsForSearch: -1,
+  });
 });

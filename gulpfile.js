@@ -56,6 +56,7 @@ function bundlecss() {
     'node_modules/normalize.css/normalize.css',
     'node_modules/fullpage.js/dist/fullpage.css',
     'node_modules/owl.carousel/dist/assets/owl.carousel.css',
+    'node_modules/select2/dist/css/select2.css',
     path.src.css,
   ])
     .pipe(scss())
@@ -85,6 +86,8 @@ function bundlejs() {
     'node_modules/fullpage.js/dist/fullpage.js',
     'node_modules/gsap/dist/gsap.js',
     'node_modules/owl.carousel/dist/owl.carousel.js',
+    'node_modules/select2/dist/js/select2.js',
+    'node_modules/isotope-layout/dist/isotope.pkgd.js',
     path.src.js,
   ])
     .pipe(concat('bundle.min.js'))
