@@ -62,4 +62,33 @@ $(() => {
   $('.select select').select2({
     minimumResultsForSearch: -1,
   });
+
+  const $subPic = $('.single__subpic');
+  const $mainPic = $('.single__mainpic img');
+
+  $subPic.on('click', () => {
+    let $currentPic = $(this).attr('src');
+    $mainPic
+      .fadeOut(400, () => {
+        $mainPic.attr('src', $currentPic);
+        $mainPic.attr('srcset', '');
+      })
+      .fadeIn();
+  });
+
+  // Topics
+  const $s_topic = $('.single__tabs-topic');
+  const $s_content = $('.single__tabs-content');
+
+  $s_topic.on('click', function () {
+    let t_id = $(this).attr('data-tab');
+    let t_active = 't_active';
+    let c_active = 'c_active';
+
+    $s_topic.removeClass(t_active);
+    $s_content.removeClass(c_active);
+
+    $(this).addClass(t_active);
+    $(`#${t_id}`).addClass(c_active);
+  });
 });
