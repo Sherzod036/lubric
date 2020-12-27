@@ -7,6 +7,21 @@
     <link rel="stylesheet" href="css/bundle.min.css" />
   </head>
   <body>
+    <div class="popup">
+      <div class="popup__content" style="background: url('img/popup_bg.jpg') no-repeat">
+        <span class="popup__close">
+          <img src="img/popup_close.svg" alt="" />
+        </span>
+        <form class="form" action="/">
+          <span class="form__title">Оставить заявку</span>
+          <span class="form__subtitle">Моторное масло Zoon SAE 75W85</span>
+          <input class="form__input" type="text" placeholder="Ваше имя" />
+          <input class="form__input" type="text" placeholder="Ваш телефон" />
+          <button class="form__btn" type="submit">Отправить</button>
+        </form>
+      </div>
+    </div>
+
     @@include('partials/_header-pages.html')
 
     <div class="single">
@@ -26,7 +41,7 @@
             </li>
           </ul>
         </div>
-        <!-- * /Breadcrumbs -->
+        <!-- /Breadcrumbs -->
         <a class="click-back" href="#">
           <img src="img/back_ico.svg" alt="" />
           Назад
@@ -101,59 +116,7 @@
     </div>
     <!-- /Single -->
 
-    <footer class="footer" style="background: url('../img/footer_bg.jpg') no-repeat">
-      <div class="wrapper-pages footer__items">
-        <div class="footer_logo footer__item">
-          <span class="footer__logo">
-            <img src="img/logos/footer.svg" alt="" />
-          </span>
-        </div>
-        <!-- /Item -->
-        <div class="footer_contact footer__item">
-          <div class="footer__contact">
-            <span class="footer_icon icon-phone"></span>
-            <div class="footer__links">
-              <a class="footer__link" href="tel:+998712318787">+998 71 231 87 87</a>
-              <a class="footer__link" href="tel:+998901234567">+998 90 123 45 67</a>
-            </div>
-          </div>
-        </div>
-        <!-- /Item -->
-        <div class="footer_contact footer__item">
-          <div class="footer__contact">
-            <span class="footer_icon icon-mail"></span>
-            <div class="footer__links">
-              <a class="footer__link" href="mailto:info@lubric.uz">info@lubric.uz</a>
-              <a class="footer__link" href="mailto:sales@lubric.uz">sales@lubric.uz</a>
-            </div>
-          </div>
-        </div>
-        <!-- /Item -->
-        <div class="footer_contact footer__item">
-          <div class="footer__contact">
-            <span class="footer_icon icon-marker"></span>
-            <div class="footer__links">
-              <a class="footer__link" href="https://goo.gl/maps/GKPhdXMVwJwRHCjU7" target="_blank">
-                Узбекистан, г. Ташкент,<br />
-                ул. Чиланзар, дом 83.
-              </a>
-            </div>
-          </div>
-        </div>
-        <!-- /Item -->
-      </div>
-    </footer>
-    <!-- /Footer -->
-
-    <div class="footer__copyright">
-      <div class="wrapper-pages footer__copyright-items">
-        <span class="footer__copyright-txt">© 2021 ООО «Lubric company». Все права защищены</span>
-        <a class="space" href="http://xspace.uz/" target="_blank">
-          <img src="img/logos/space.svg" alt="" />
-        </a>
-      </div>
-    </div>
-    <!-- /Copyright -->
+    @@include('partials/_footer.html')
 
     <script src="js/bundle.min.js"></script>
   </body>

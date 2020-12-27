@@ -16,6 +16,19 @@
   background: $secondary;
 }
 
+body {
+  min-height: 100vh;
+}
+
+body::-webkit-scrollbar {
+  width: 5px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: $secondary;
+  outline: 1px solid $white;
+}
+
 li {
   list-style: none;
 }

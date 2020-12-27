@@ -57,8 +57,17 @@ $(() => {
     navText: ['<span class="icon-slider-arrow-left"></span>', '<span class="icon-slider-arrow-right"></span>'],
   });
 
-  // Selects
+  // CAT LINKS
+  const $catBtn = $('.category__btn');
 
+  $catBtn.on('change', function () {
+    let $dataCat = $(this).attr('data-cat');
+    $('.select_cat option[value="' + $dataCat + '"]')
+      .prop('selected', true)
+      .trigger('change');
+  });
+
+  // SELECTS
   $('.select select').select2({
     minimumResultsForSearch: -1,
   });
@@ -76,7 +85,6 @@ $(() => {
       .fadeIn();
   });
 
-  // Topics
   const $s_topic = $('.single__tabs-topic');
   const $s_content = $('.single__tabs-content');
 
@@ -91,4 +99,57 @@ $(() => {
     $(this).addClass(t_active);
     $(`#${t_id}`).addClass(c_active);
   });
+
+  const $singleBtn = $('.single__btn');
+  const $popup = $('.popup');
+  const $popupClose = $('.popup__close');
+
+  $singleBtn.on('click', (e) => {
+    e.preventDefault();
+    $popup.fadeIn();
+    $popup.css({ display: 'flex' });
+  });
+
+  $popupClose.on('click', () => {
+    $popup.fadeOut();
+  });
+
+  // ISOTOPE
+  const $ISO_CONTENT = $('.page-products__content');
+  const $SELECTS = $('.selects-block');
+  const $NOT_FOUND = $('#not-found');
+
+  const $grid = $ISO_CONTENT.isotope({
+    itemSelector: '.product',
+  });
+
+  let $filters = {};
+
+  $SELECTS.on('change', (e) => {
+    let $select = $(e.target);
+
+    let $filterGroup = $select.attr('value-group');
+
+    $filters[$filterGroup] = e.target.value;
+
+    let $filterValue = concatValues($filters);
+
+    $grid.isotope({ filter: $filterValue });
+
+    $grid.on('arrangeComplete', (e, items) => {
+      if (items.length == 0) {
+        $NOT_FOUND.css({ display: 'block' });
+      } else {
+        $NOT_FOUND.css({ display: 'none' });
+      }
+    });
+  });
+
+  function concatValues(obj) {
+    let value = '';
+    for (let prop in obj) {
+      value += obj[prop];
+    }
+    return value;
+  }
 });
