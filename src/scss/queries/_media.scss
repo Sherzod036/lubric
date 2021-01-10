@@ -1,3 +1,12 @@
+@media (max-width: 1600px) {
+  .hero__pic_circle {
+    right: 17%;
+  }
+  .hero__sketch_right {
+    width: 1000px;
+  }
+}
+
 @media (max-width: 1400px) {
   * {
     font-size: 14px;
@@ -6,6 +15,14 @@
   h2 {
     font-size: 20px;
     line-height: 22px;
+  }
+
+  .hero__pic_circle {
+    right: 12%;
+  }
+
+  .hero__sketch_right {
+    width: 900px;
   }
 
   .category {
@@ -30,7 +47,7 @@
 
   .title {
     padding: 0;
-    top: 11%;
+    top: 13%;
   }
 
   .scroll-down {
@@ -412,5 +429,24 @@
 
   .select__title {
     margin-right: 0;
+  }
+
+  .seeall {
+    bottom: -3%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+  }
+
+  .contact__info {
+    flex-direction: column;
+  }
+  .contact__info-ico {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  h1 {
+    font-size: 35px;
   }
 }

@@ -28,14 +28,69 @@ $(() => {
 
         tl.staggerFrom(
           letters,
-          0.6,
+          0.5,
           { opacity: 0, ease: Power4.easeInOut },
-          0.06,
-          0
+          0.05
         );
       },
     });
   }
+
+  // MENU
+  const $buger = $('.burger');
+  const $menu = $('.menu');
+  const $menuClose = $('.menu__list-close');
+  const $menuList = $('.menu__list');
+  const $verticalBlock = $('.vertical-block');
+  const $topLink = $('.top-link');
+  const $botLink = $('.bot-link');
+  const $menuListCategory = $('.menu__list-category');
+  const $subscribeTitle = $('.menu__list-subscribe-title');
+  const $subscribeItem = $('.menu__list-subscribe-item');
+
+  const menuTl = new TimelineMax({ paused: true });
+
+  menuTl
+    .to($menu, 0.4, { display: 'block' })
+    .fromTo(
+      $verticalBlock,
+      0.3,
+      { x: '100%', opacity: 0 },
+      { x: '0%', opacity: 1 }
+    )
+    .fromTo(
+      $menuList,
+      0.4,
+      { x: '100%', opacity: 0 },
+      { x: '0%', opacity: 1 },
+      '-=0.2'
+    )
+    .from($topLink, 0.3, { y: 50, opacity: 0 })
+    .staggerFrom(
+      $menuListCategory,
+      0.3,
+      {
+        y: 50,
+        opacity: 0,
+      },
+      0.1
+    )
+    .staggerFrom($botLink, 0.3, { y: 60, opacity: 0 }, 0.1)
+    .from($subscribeTitle, 0.3, { y: 50, opacity: 0 })
+    .staggerFrom($subscribeItem, 0.3, { x: -50, opacity: 0 }, 0.1);
+
+  $buger.on('click', function (e) {
+    e.preventDefault();
+    menuTl.play();
+  });
+
+  $menuClose.on('click', function () {
+    menuTl.reverse(-1);
+  });
+
+  $('.menu__list-link').on('click', function () {
+    menuTl.reverse(-1);
+  });
 
   const w_width = $(window).width();
 
@@ -70,29 +125,28 @@ $(() => {
       .eq($(this).index())
       .addClass('active');
 
-    if ($(window).width() > 992) {
-      $('.logo_zoon').css({ borderRight: bS, borderBottom: bS });
-      let _this = $(this);
+    $('span.tablogo').removeClass('default-tab');
 
-      if (_this.hasClass('logo_zoon')) {
-        _this.find('.tablogo').css({ borderRight: bW, borderBottom: bS });
-        $tablogoSynheon.css({
-          borderBottom: bW,
-          borderRight: bS,
-        });
-        $tablogoGraumann.css({ borderRight: bS });
-      } else if (_this.hasClass('logo_synheon')) {
-        _this.find('.tablogo').css({ borderRight: bW, borderBottom: bS });
-        $tablogoZoon.css({
-          borderRight: bS,
-          borderBottom: bS,
-        });
-        $tablogoGraumann.css({ borderRight: bS });
-      } else if (_this.hasClass('logo_graumann')) {
-        _this.find('.tablogo').css({ borderRight: bW });
-        $tablogoZoon.css({ borderBottom: bW });
-        $tablogoSynheon.css({ borderRight: bS });
-      }
+    let _this = $(this);
+
+    if (_this.hasClass('logo_zoon')) {
+      _this.find('.tablogo').css({ borderRight: bW, borderBottom: bS });
+      $tablogoSynheon.css({
+        borderBottom: bW,
+        borderRight: bS,
+      });
+      $tablogoGraumann.css({ borderRight: bS });
+    } else if (_this.hasClass('logo_synheon')) {
+      _this.find('.tablogo').css({ borderRight: bW, borderBottom: bS });
+      $tablogoZoon.css({
+        borderRight: bS,
+        borderBottom: bS,
+      });
+      $tablogoGraumann.css({ borderRight: bS });
+    } else if (_this.hasClass('logo_graumann')) {
+      _this.find('.tablogo').css({ borderRight: bW });
+      $tablogoZoon.css({ borderBottom: bW });
+      $tablogoSynheon.css({ borderRight: bS });
     }
   });
 
@@ -200,4 +254,14 @@ $(() => {
     }
     return value;
   }
+
+  // MOBI MENU
+
+  const $dropdown = $('.dropdown');
+  const $mobiBurger = $('.mobi-burger');
+
+  $mobiBurger.on('click', function (e) {
+    e.preventDefault();
+    $dropdown.slideToggle().css({ display: 'flex' });
+  });
 });
